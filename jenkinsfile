@@ -9,7 +9,7 @@ node{
         pollSCM('* * * * *') //polling for changes, here once a minute
     } 
    stage('Gradle Build') {
-     def gradleHome = tool name: 'gradle', type: 'gradle'
+     def gradleHome = tool name: 'Gradle', type: 'gradle'
      def gradleCMD = "${gradleHome}/bin/gradle"
      sh "${gradleCMD} clean build"
     }
